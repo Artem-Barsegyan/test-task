@@ -1,0 +1,120 @@
+@use 'vars' as *;
+
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: "Lato", monospace;
+    font-size: 16px;
+    background-color: #fff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Убираем дефолтные стили кнопок */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Особенно важно для кнопок */
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Убираем синие подсветки на мобилках */
+input,
+textarea,
+button,
+select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Для инпутов в мобильных браузерах */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+}
+
+/* Убираем дефолтные стили списков */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Убираем подчеркивание ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Улучшаем читаемость */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 36px;
+    text-wrap: balance;
+    line-height: 42px;
+}
+
+p,
+li {
+    text-wrap: pretty;
+}
+
+/* Фокус-индикаторы для доступности */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid $gray-900;
+    outline-offset: 2px;
+}
+
+/* Основной контейнер  */
+.container {
+    width: 100%;
+    max-width: 1245px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

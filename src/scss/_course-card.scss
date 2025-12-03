@@ -1,0 +1,104 @@
+@use 'vars' as *;
+
+.course-cards {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+    .card-item {
+        width: 100%;
+        max-width: 390px;
+        border: 1px solid $gray-300;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+        background: $white;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 24px;
+            display: block;
+        }
+    }
+}
+
+.card-item__description {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    .card-item__subtitle {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        color: $white;
+        align-self: flex-start;
+        margin-bottom: 20px;
+
+        &--marketing {
+            padding: 1px 8px;
+            border-radius: 4px;
+            background-color: rgba(3, 206, 164, 1);
+        }
+
+        &--management {
+            padding: 1px 8px;
+            border-radius: 4px;
+            background-color: rgba(90, 135, 252, 1);
+        }
+
+        &--recruiting {
+            padding: 1px 8px;
+            border-radius: 4px;
+            background-color: rgba(248, 152, 40, 1);
+        }
+
+        &--design {
+            padding: 1px 8px;
+            border-radius: 4px;
+            background-color: rgba(245, 47, 110, 1);
+        }
+
+        &--development {
+            padding: 1px 8px;
+            border-radius: 4px;
+            background-color: rgba(119, 114, 241, 1);
+        }
+    }
+
+    .card-item__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 150%;
+        color: $gray-900;
+        margin-bottom: 20px;
+    }
+
+    .card-item__footer {
+
+        span:nth-child(1) {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 150%;
+            color: $priceColour;
+            margin-right: 6px;
+        }
+
+        span:nth-child(2) {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 150%;
+            color: $gray-700;
+            border-left: 1px solid $gray-700;
+            padding-left: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 1243px) {
+    .course-cards {
+        justify-content: space-around;
+    }
+}
