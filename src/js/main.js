@@ -92,7 +92,7 @@ const courseCards = [
         price: '$530',
         author: 'Kristin Watson',
         id: Math.random().toString(16).slice(2),
-        categoryId: '5'
+        categoryId: '2'
     },
     {
         authorImg: leslieImg,
